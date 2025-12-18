@@ -2,7 +2,6 @@
 
 :root {
     --bg-main: #0c1022;
-
     --bg-glass: rgba(255, 255, 255, 0.05);
     --bg-card: rgba(0, 183, 255, 0.15);
 
@@ -20,10 +19,8 @@
     --border-radius-lg: 20px;
     --border-radius-md: 10px;
     --border-radius-sm: 6px;
-
     --shadow-neon: 0 0 15px rgba(51, 204, 255, 0.35);
 }
-
 
 * {
     margin: 0;
@@ -35,55 +32,53 @@
 body {
     background: var(--bg-main);
     color: var(--text-main);
-    scroll-behavior: smooth;
 }
 
 .header {
     position: fixed;
-    background: rgba(12, 16, 34, 0.85);
-    box-shadow: 0 0 15px rgba(51, 204, 255, 0.3);
-    width: 100%;
     top: 0;
     left: 0;
+    width: 100%;
     padding: 20px 10%;
-    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: rgba(12, 16, 34, 0.85);
+    box-shadow: 0 0 15px rgba(51, 204, 255, 0.3);
     z-index: 100;
 }
 
 .logo {
     font-size: 25px;
-    color: #fff;
-    text-decoration: none;
     font-weight: 600;
-    cursor: pointer;
+    color: var(--text-main);
+    text-decoration: none;
 }
 
 .navbar a {
     font-size: 18px;
-    color: var(--text-main);
-    text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
+    color: var(--text-main);
+    text-decoration: none;
 }
 
 .navbar a.active,
 .navbar a:hover {
     background: var(--gradient-main);
-    -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     transition: 0.2s all;
 }
 
 .home {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 8%;
+    flex-wrap: wrap;
 }
 
 .home-content h1 {
@@ -98,6 +93,7 @@ body {
 
 .home-content p {
     font-size: 16px;
+    line-height: 1.5;
 }
 
 .btn {
@@ -107,21 +103,18 @@ body {
     align-items: center;
     width: 180px;
     height: 48px;
-    background: transparent;
     font-size: 19px;
-    color: #fff;
     border-radius: 40px;
     text-decoration: none;
     color: #fff;
     letter-spacing: 1px;
     margin-top: 10px;
+    background: transparent;
 }
 
 .btn::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
     inset: 0;
     background: var(--gradient-main);
     z-index: -1;
@@ -131,11 +124,12 @@ body {
 .social-icons {
     background: var(--bg-glass);
     border-radius: 10px;
+    padding: 15px;
 }
 
 .social-icons a {
     display: block;
-    margin: 30px 0;
+    margin: 15px 0;
     font-size: 30px;
     color: var(--text-muted);
     transition: 0.2s all;
@@ -143,8 +137,8 @@ body {
 
 .social-icons a:hover {
     background: linear-gradient(45deg, #f06, #3cf);
-    -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .logo-img {
@@ -160,11 +154,9 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: #fff;
 }
 
-.about .container-about,
-.container-skills {
+.about .container-about {
     width: 80%;
     margin: 60px auto;
     background: var(--bg-card);
@@ -219,7 +211,6 @@ body {
     left: 0;
     top: 2px;
     color: var(--primary-green);
-    font-size: 16px;
 }
 
 .container-skills {
@@ -256,13 +247,13 @@ body {
     font-weight: 500;
 }
 
-#projects {
+.projects {
     padding: 60px 8%;
     text-align: center;
     color: var(--text-main);
 }
 
-#projects h2 {
+.projects h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     background: var(--gradient-main);
@@ -275,7 +266,6 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
-    margin-top: 30px;
 }
 
 .project-card {
@@ -321,15 +311,12 @@ body {
 
 .project-card a:hover {
     background: var(--primary-green);
-    color: #000;
 }
 
 .footer {
     background: rgba(12, 16, 34, 0.95);
     color: var(--text-soft);
     padding: 60px 8%;
-    position: relative;
-    z-index: 10;
     text-align: center;
 }
 
@@ -338,7 +325,6 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 40px;
-    margin-bottom: 20px;
 }
 
 .footer-logo {
@@ -353,7 +339,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 0;
     justify-content: center;
 }
 
@@ -378,14 +363,9 @@ body {
     margin-bottom: 15px;
 }
 
-.footer-contact p {
-    margin-bottom: 10px;
-}
-
+.footer-contact p,
 .footer-contact a {
-    color: var(--primary-cyan);
-    text-decoration: none;
-    transition: 0.3s;
+    color: var(--text-soft);
 }
 
 .footer-contact a:hover {
@@ -422,7 +402,6 @@ body {
     background: rgba(255, 255, 255, 0.1);
     color: var(--text-main);
     font-size: 14px;
-    transition: 0.3s;
 }
 
 .contact-form input:focus,
@@ -437,7 +416,6 @@ body {
     color: #000;
     font-weight: 600;
     border-radius: var(--border-radius-sm);
-    border: none;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -453,19 +431,79 @@ body {
     margin-top: 20px;
 }
 
+@media (max-width: 1024px) {
+    .home-content h1 {
+        font-size: 42px;
+    }
+
+    .home-content h3 {
+        font-size: 24px;
+    }
+
+    .container-skills {
+        gap: 40px;
+    }
+}
+
 @media (max-width: 768px) {
-    .footer-container {
+    .home {
         flex-direction: column;
-        align-items: center;
+        padding: 0 5%;
     }
 
-    .footer-links {
-        flex-direction: column;
-        gap: 10px;
+    .home-content h1 {
+        font-size: 36px;
+        text-align: center;
     }
 
-    .contact-form input,
-    .contact-form textarea {
+    .home-content h3 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .logo-img {
+        width: 180px;
+        height: 180px;
+        margin: 20px 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        display: none;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    .container-skills {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-content h1 {
+        font-size: 28px;
+    }
+
+    .home-content h3 {
+        font-size: 18px;
+    }
+
+    .btn {
+        width: 140px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .project-card {
         width: 100%;
     }
 }
