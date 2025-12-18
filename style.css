@@ -1,27 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-    /* الخلفيات */
     --bg-main: #0c1022;
-    /* الخلفية الأساسية */
+
     --bg-glass: rgba(255, 255, 255, 0.05);
     --bg-card: rgba(0, 183, 255, 0.15);
 
-    /* النصوص */
     --text-main: #ffffff;
     --text-muted: #c7c7c7;
     --text-soft: #e0e0e0;
 
-    /* الألوان الأساسية (Neon Gradient) */
     --primary-pink: #ff0066;
     --primary-cyan: #33ccff;
     --primary-green: #00ffaa;
 
-    /* التدرجات */
     --gradient-main: linear-gradient(45deg, #ff0066, #33ccff);
     --gradient-soft: linear-gradient(to right, transparent, #00ffaa, transparent);
 
-    /* حدود و ظلال */
     --border-radius-lg: 20px;
     --border-radius-md: 10px;
     --border-radius-sm: 6px;
@@ -40,6 +35,7 @@
 body {
     background: var(--bg-main);
     color: var(--text-main);
+    scroll-behavior: smooth;
 }
 
 .header {
